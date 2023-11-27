@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.rideapp.publishride.model.bookings">
+		<field name="bookingsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="bookingDate" type="Date" />
+		<field name="bookedSeats" type="int" />
+		<field name="totalPrice" type="float" />
+		<field name="ridesId" type="long" />
+	</model>
+	<model name="com.rideapp.publishride.model.locations">
+		<field name="locationsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="latitude" type="double" />
+		<field name="longitude" type="double" />
+	</model>
+	<model name="com.rideapp.publishride.model.returnRide">
+		<field name="returnRideId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="returnDate" type="Date" />
+		<field name="availableSeats" type="int" />
+		<field name="price" type="float" />
+		<field name="ridesId" type="long" />
+	</model>
+	<model name="com.rideapp.publishride.model.rides">
+		<field name="ridesId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="leavingLocation" type="String" />
+		<field name="headingLocation" type="String" />
+		<field name="arivalDate" type="Date" />
+		<field name="availableSeats" type="int" />
+		<field name="comfortLevel" type="String" />
+		<field name="price" type="float" />
+	</model>
+	<model name="com.rideapp.publishride.model.stopovers">
+		<field name="stopoversId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="location" type="String" />
+		<field name="arrivalTime" type="Date" />
+		<field name="departureTime" type="Date" />
+		<field name="ridesId" type="long" />
+	</model>
+	<model name="com.rideapp.publishride.model.vehicals">
+		<field name="vehicalsId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="carModel" type="String" />
+		<field name="plateNumber" type="String" />
+		<field name="capacity" type="int" />
+		<field name="comfortLevel" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:publish_ride:publish_ride-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../publish_ride-api/src/main/java"
+}
+
+group = "com.rideapp.publishride"

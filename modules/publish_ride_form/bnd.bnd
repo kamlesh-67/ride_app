@@ -1,0 +1,4 @@
+Bundle-Name: publish_ride_form
+Bundle-SymbolicName: com.rideapp.publishrideform
+Bundle-Version: 1.0.0
+Export-Package: com.rideapp.publishrideform.constants

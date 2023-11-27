@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.4.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_4_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.rideapp.publishride">
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+    <namespace>Rideapp</namespace>
+    <entity name="rides" local-service="true">
+
+    	<!-- PK fields -->
+
+    	<column name="ridesId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="leavingLocation" type="String"></column>
+        <column name="headingLocation" type="String"></column>
+        <column name="arivalDate" type="Date"></column>
+        <column name="availableSeats" type="int"></column>
+        <column name="comfortLevel" type="String"></column>
+        <column name="price" type="float"></column>
+    </entity>
+    <entity name="bookings" local-service="true">
+
+    	<!-- PK fields -->
+
+    	<column name="bookingsId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="bookingDate" type="Date"></column>
+        <column name="bookedSeats" type="int"></column>
+        <column name="totalPrice" type="float"></column>
+        <column name="ridesId" type="long"></column>
+    </entity>
+    <entity name="stopovers" local-service="true">
+
+
+    	<!-- PK fields -->
+
+    	<column name="stopoversId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="location" type="String"></column>
+        <column name="arrivalTime" type="Date"></column>
+        <column name="departureTime" type="Date"></column>
+        <column name="ridesId" type="long"></column>
+    </entity>
+    <entity name="returnRide" local-service="true">
+
+    	<!-- PK fields -->
+
+    	<column name="returnRideId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="returnDate" type="Date"></column>
+        <column name="availableSeats" type="int"></column>
+        <column name="price" type="float"></column>
+        <column name="ridesId" type="long"></column>
+    </entity>
+    <entity name="vehicals" local-service="true">
+
+    	<!-- PK fields -->
+
+    	<column name="vehicalsId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="carModel" type="String"></column>
+        <column name="plateNumber" type="String"></column>
+        <column name="capacity" type="int"></column>
+        <column name="comfortLevel" type="String"></column>
+    </entity>
+    <entity local-service="true" name="locations">
+
+    	<!-- PK fields -->
+
+    	<column name="locationsId" primary="true" type="long"></column>
+
+    	<!-- Group instance -->
+
+    	<column name="groupId" type="long"></column>
+
+    	<!-- Audit fields -->
+
+    	<column name="companyId" type="long"></column>
+    	<column name="userId" type="long"></column>
+    	<column name="userName" type="String"></column>
+    	<column name="createDate" type="Date"></column>
+    	<column name="modifiedDate" type="Date"></column>
+        <column name="name" type="String"></column>
+        <column name="latitude" type="double"></column>
+        <column name="longitude" type="double"></column>
+    </entity>
+</service-builder>

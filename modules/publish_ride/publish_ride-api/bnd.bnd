@@ -1,0 +1,10 @@
+Bundle-Name: publish_ride-api
+Bundle-SymbolicName: com.rideapp.publishride.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.rideapp.publishride.exception,\
+	com.rideapp.publishride.model,\
+	com.rideapp.publishride.service,\
+	com.rideapp.publishride.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../publish_ride-service/service.xml
