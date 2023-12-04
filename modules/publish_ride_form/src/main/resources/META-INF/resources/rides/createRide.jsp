@@ -33,47 +33,47 @@
 							<h5>Ride Details</h5>
 						</div>
 						<div class="mb-3">
-							<input type="text" class="form-control" name="leavingLocation"
-								id="leavingLoc" placeholder="Enter starting location"">
+							<input type="text" class="form-control" name="<portlet:namespace />leavingLocation"
+								id="<portlet:namespace />leavingLoc" placeholder="Enter starting location"">
 							<div class=" form-text">Location where you leaving from.</div>
 						</div>
 
 						<div class="mb-3">
-							<input type="text" class="form-control" name="headingLocation"
-								id="headingLoc" placeholder="Enter destination">
+							<input type="text" class="form-control" name="<portlet:namespace />headingLocation"
+								id="<portlet:namespace />headingLoc" placeholder="Enter destination">
 							<div class="form-text">Where are you heading to?</div>
 						</div>
 
 						<div class="container p-0">
 							<div class="row">
 								<div class="mb-3 col-6">
-									<input type="date" name="createDate" class="form-control"
-										id="date">
+									<input type="date" name="<portlet:namespace />createDate" class="form-control"
+										id="<portlet:namespace />date">
 									<div class="form-text">When is the ride?</div>
 								</div>
 								<div class="mb-3 col-6">
-									<input type="time" class="form-control" id="time">
+									<input type="time" name="<portlet:namespace />arrivalTime" class="form-control" id="time">
 									<div class="form-text">What time will the ride start?</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="mb-3">
-							<input type="number" max="4" min="1" maxlength="1" minlength="1"
+							<input type="number" name="<portlet:namespace />seats" max="4" min="1" maxlength="1" minlength="1"
 								class="form-control" id="availableSeats"
 								placeholder="Enter available seats">
 							<div class="form-text">How many seats are available?</div>
 						</div>
 
 						<div class="mb-3">
-							<textarea type="number" class="form-control" id="availableSeats"
+							<textarea type="text" name="<portlet:namespace />comfortLevel" class="form-control" id="availableSeats"
 								placeholder="Describe the comfort level of your ride"></textarea>
 							<div class="form-text">You can add (Vehicle Condition,
 								Amenities, Space, Additional Services )</div>
 						</div>
 
 						<div class="mb-3">
-							<input type="number" min="400" max="600" step="20"
+							<input type="number" name="<portlet:namespace />Price" min="400" max="600" step="20"
 								class="form-control" placeholder="Enter price per seat">
 							<div class="form-text">Set the price per seat</div>
 						</div>
@@ -197,7 +197,7 @@
 
 
 						<div class="mb-3">
-							<select class="form-select" aria-label="Default select example">
+							<select class="form-select" name="<portlet:namespace />carName" aria-label="Default select example">
 								<option selected>Enter vehicle model</option>
 								<option value="1">Maruti Swift</option>
 								<option value="2">Tata Punch</option>
@@ -210,7 +210,7 @@
 
 
 						<div class="mb-3">
-							<input type="text" class="form-control" id="leavingLoc"
+							<input type="text" class="form-control" name="<portlet:namespace />carPlateNumber" id="leavingLoc"
 								placeholder="Enter plate number">
 							<div class=" form-text">What is the license plate number of
 								your vehicle?</div>
@@ -219,7 +219,7 @@
 
 
 						<div class="mb-3">
-							<input type="number" min="1" class="form-control"
+							<input type="number" name="<portlet:namespace />seatingCapacity" min="1" class="form-control"
 								id="availableSeats" placeholder="Enter available seats">
 							<div class=" form-text">How many people can your vehicle
 								accommodate?</div>
@@ -227,7 +227,7 @@
 
 
 						<div class="mb-3">
-							<textarea type="number" class="form-control" id="availableSeats"
+							<textarea type="number" name="<portlet:namespace />carComfartLevel" class="form-control" id="availableSeats"
 								placeholder="Describe the comfort level of your ride"></textarea>
 							<div class="form-text">You can add (Vehicle Condition,
 								Amenities, Space, Additional Services )</div>
