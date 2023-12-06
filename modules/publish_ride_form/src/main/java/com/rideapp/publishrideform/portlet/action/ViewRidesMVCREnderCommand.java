@@ -19,7 +19,7 @@ import javax.portlet.RenderResponse;
 import org.osgi.service.component.annotations.Component;
 
 @Component(immediate = true, property = { "javax.portlet.name=" + Publish_ride_formPortletKeys.PUBLISH_RIDE_FORM,
-		"mvc.command.name=/", "mvc.command.name=/rideapp/createride/add"
+		"mvc.command.name=/"
 
 }, service = MVCRenderCommand.class)
 public class ViewRidesMVCREnderCommand implements MVCRenderCommand {
@@ -31,7 +31,7 @@ public class ViewRidesMVCREnderCommand implements MVCRenderCommand {
 
 		ThemeDisplay themeDisplay = (ThemeDisplay) renderRequest.getAttribute(WebKeys.THEME_DISPLAY);
 		try {
-			List<rides> ride = ridesLocalServiceUtil.getrideses(0, -1);
+			List<rides> ride = ridesLocalServiceUtil.getAllRides();
 //		for (rides r : ride) {
 //			System.out.println("Leaving : "+r.getLeavingLocation());
 //			System.out.println("Heading : "+r.getHeadingLocation());
@@ -41,7 +41,8 @@ public class ViewRidesMVCREnderCommand implements MVCRenderCommand {
 //			System.out.println("Price : "+r.getPrice());
 //		}
 		if (ride != null) {
-			renderRequest.setAttribute("r", ride);
+			renderRequest.setAttribute("ride", ride);
+//			renderRequest.setAttribute("test", "Test String");
 		} else {
 		    _log.warn("No rides found");
 		}

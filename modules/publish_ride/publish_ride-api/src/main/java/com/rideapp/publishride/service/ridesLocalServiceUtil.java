@@ -214,6 +214,10 @@ public class ridesLocalServiceUtil {
 		return getService().getActionableDynamicQuery();
 	}
 
+	public static List<rides> getAllRides() {
+		return getService().getAllRides();
+	}
+
 	public static
 		com.liferay.portal.kernel.dao.orm.IndexableActionableDynamicQuery
 			getIndexableActionableDynamicQuery() {

@@ -15,17 +15,25 @@
 package com.rideapp.publishride.service.impl;
 
 import com.liferay.portal.aop.AopService;
-
+import com.rideapp.publishride.model.rides;
 import com.rideapp.publishride.service.base.ridesLocalServiceBaseImpl;
+
+import java.util.List;
 
 import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(
-	property = "model.class.name=com.rideapp.publishride.model.rides",
-	service = AopService.class
-)
+@Component(property = "model.class.name=com.rideapp.publishride.model.rides", service = AopService.class)
 public class ridesLocalServiceImpl extends ridesLocalServiceBaseImpl {
+
+	public List<rides> getAllRides() {
+		try {
+			return ridesPersistence.findAll();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

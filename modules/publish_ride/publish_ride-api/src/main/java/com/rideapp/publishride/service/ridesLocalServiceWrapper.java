@@ -233,6 +233,11 @@ public class ridesLocalServiceWrapper
 	}
 
 	@Override
+	public java.util.List<com.rideapp.publishride.model.rides> getAllRides() {
+		return _ridesLocalService.getAllRides();
+	}
+
+	@Override
 	public com.liferay.portal.kernel.dao.orm.IndexableActionableDynamicQuery
 		getIndexableActionableDynamicQuery() {
 
